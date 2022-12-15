@@ -1,0 +1,27 @@
+X PAOLO:
+- inserire ref nel config
+- in polls, aggiungere l'id del poll su typeform
+- methodology_description
+
+come input oltre al config.json imposta dei parametri stringa che sono brand_name product_name (per la prima slide) e il parametro research_type, che sarà una delle chiavi del campo research_types del config.json (nel caso di esempio che ti ho dato research_type vale "packaging_test"), research_scope (per la slide indagine qualitativa)
+prepara un metodo make_ppt(config,brand_name,product_name,research_type,research_scope)
+
+other va sempre per ultimo
+
+il contenuto di questions in config.json NON va utilizzato per il ppt, a meno del parametro ref
+
+metti nel ppt le domande prese direttamente da typeform nell'ordine in cui compaiono nel typeform
+
+ogni volta verifichi se, per la sezione in cui si trova la ref, ho già inserito la slide di titolo della sezione, altrimenti la inserisco prima della ref corrente
+
+il titolo della slide di una domanda lo prendi dal title del question group
+
+il sottotitolo, cioè la domanda vera e propria fatta all'utente la prendi da typeform
+
+attenzione, alcune domande contengono delle immagini, che vanno incluse nella slide (parametro attechment nel field)
+
+indice senza numeri di pagina
+
+la sezione conclusioni la aggiungi sempre vuota
+
+per la slide indiagine qualitativa, prevediamo due titoli "Scopo della ricerca" e "La metodologia", sotto ogni titolo un riquadro di testo, scopo della ricerca passato come parametro e methodology_description che sta nel config.json

@@ -1,0 +1,27 @@
+A MANO
+dividere le slide in essenziali.pptx
+
+***
+preparare un dict(slides_order) che serva per tenere traccia delle slide tramite il loro {'tipo' : 'nome'}
+***
+
+IN CODICE
+prendere typeform, map e config come json
+
+prendere le essenziali.pptx e leggerne le slide per classificarle (es. title, bar, hist, pie, stacked...)
+
+prepara come string brand_name product_name research_type research_scope
+
+make_ppt(config,brand_name,product_name,research_type,research_scope)
+
+creare slides (iniziale + indice + indagine qualitativa)
+
+secondo l'ordine di typeform (for question in field):
+    se nel slides_order esiste il titolo_sezione(da config(ref della question)):
+        slide_ref[  slide_layout=classifica_slide, title=config(question_group(ref)), subtitle=typeform(ref(title)), (if contiene_foto_prodotto_va_inserito = slide_ref_contiene_layout_previsto)  ]
+    else:
+        inserisci slide titolo poi slide_ref
+
+slide conclusioni vuota
+
+ultima slide di foodu?
